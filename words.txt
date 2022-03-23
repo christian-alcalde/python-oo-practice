@@ -1,0 +1,14 @@
+cat
+dog
+porcupine
+words
+more
+# Veggies
+
+kale
+parsnips
+
+# Fruits
+
+apple
+mango
