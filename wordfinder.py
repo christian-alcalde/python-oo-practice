@@ -1,6 +1,17 @@
 from random import choice
+
 class WordFinder:
-    """Word Finder: finds random words from a dictionary."""
+    """Word Finder: finds random words from a dictionary.
+
+    >>> find_words = WordFinder("words.txt")
+    14 words read
+
+    >>> find_words.word_list
+    ['cat', 'dog', 'porcupine', 'words', 'more', '# Veggies', '', 'kale', 'parsnips', '', '# Fruits', '', 'apple', 'mango']
+
+    >>> find_words.random() in find_words.word_list
+    True
+    """
 
     def __init__(self, path):
         """Creates WordFinder from path"""
@@ -24,7 +35,14 @@ class WordFinder:
 
 
 class SpecialWordFinder(WordFinder):
-    """SpecialWordFinder: finds only words omits comments and new lines"""
+    """SpecialWordFinder: finds only words omits comments and new lines
+
+        >>> special_word_finder = SpecialWordFinder("words.txt")
+        9 words read
+
+        >>> special_word_finder.word_list
+        ['cat', 'dog', 'porcupine', 'words', 'more', 'kale', 'parsnips', 'apple', 'mango']
+    """
 
     def find_words(self, file):
         """Finds words that are not comments and not new lines, sets words_list"""
